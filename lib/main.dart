@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'konusma.dart';
 
 void main() {
   runApp(const MyApp());
@@ -6,7 +7,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
 
   // This widget is the root of your application.
   @override
@@ -33,15 +33,17 @@ class MyApp extends StatelessWidget {
 
 class AnaSayfa extends StatelessWidget {
   const AnaSayfa({Key? key}) : super(key: key);
-  ListTile listeElemani(context,String yazi,IconData simge ) {
+
+  ListTile listeElemani(context, String yazi, IconData simge) {
     return ListTile(
-      title:  Text(yazi),
+      title: Text(yazi),
       leading: Icon(simge),
       onTap: () {
         Navigator.pop(context);
       },
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -87,49 +89,16 @@ class AnaSayfa extends StatelessWidget {
                   ],
                 ),
               ),
-              ListTile(
-                title: Text('Yeni Grup'),
-                leading: Icon(Icons.group),
-                onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: const Text('Kişiler'),
-                leading: Icon(Icons.person_pin_outlined),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: const Text('Aramalar'),
-                leading: Icon(Icons.call),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: const Text('Yakındaki Kişiler'),
-                leading: Icon(Icons.emoji_people_rounded),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: const Text('Kayıtlı Measajlar'),
-                leading: Icon(Icons.star_rate_sharp),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
+              listeElemani(context, "Grup Oluştur", Icons.group),
+              listeElemani(context, "Aramalar", Icons.person_pin_outlined),
+              listeElemani(context, "Aramalar", Icons.call),
+              listeElemani(
+                  context, "Yakındaki Kişiler", Icons.emoji_people_rounded),
+              listeElemani(context, "Kayıtlı Mesajlar", Icons.star_border),
               listeElemani(context, "Ayarlar", Icons.settings_rounded),
-              listeElemani(context, "Arkadaşlarınızı Davet Edin", Icons.share_outlined),
-
+              listeElemani(
+                  context, "Arkadaşlarınızı Davet Edin", Icons.share_outlined),
               listeElemani(context, "Telegram Özellikleri", Icons.add_box),
-
             ],
           ),
         ),
@@ -139,6 +108,1024 @@ class AnaSayfa extends StatelessWidget {
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.search),
+            ),
+          ],
+        ),
+        body: ListView(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => kEkrani()),
+                );
+              },
+              child: Card(
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Flutter Telegram"),
+                            Row(
+                              children: [
+                                Text("İmran:", style: TextStyle()),
+                                Text(
+                                  "Bu flutter telegram uygulaması",
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                shadowColor: Colors.green,
+              ),
             ),
           ],
         ),
